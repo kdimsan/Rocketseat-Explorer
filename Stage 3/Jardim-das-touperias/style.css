@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background: url(assets/fundo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  display: grid;
+  grid-template-areas:
+    "A B C D"
+    "F G H I"
+    "J K L M";
+  gap: 55px;
+}
+
+.hole {
+  background-image: url(assets/toupeira6.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 150px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation-name: imageChanger;
+  animation-duration: 2000ms;
+  animation-iteration-count: 100;
+}
+
+@keyframes imageChanger {
+  0% {
+    background-image: url(assets/toupeira1.svg);
+  }
+  20% {
+    background-image: url(assets/toupeira2.svg);
+  }
+  40% {
+    background-image: url(assets/toupeira3.svg);
+  }
+  60% {
+    background-image: url(assets/toupeira4.svg);
+  }
+  80% {
+    background-image: url(assets/toupeira5.svg);
+  }
+  100% {
+    background-image: url(assets/toupeira6.svg);
+  }
+}
