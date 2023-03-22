@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --fc-geral: #34355b;
+
+  --ff-text-button :font-family: "DM Sans", sans-serif;
+}
+
+body {
+  display: flex;
+
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  background-size: 200% 100%;
+
+  animation: background-gradient 10s ease infinite;
+}
+
+main {
+  display: flex;
+  flex: 1;
+
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 43rem;
+  height: 45rem;
+
+  background: #fff;
+
+  border-radius: 1rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+
+  padding: 4.8rem 6.4rem 5.5rem 6.4rem;
+
+}
+
+.container-1-title,
+.container-2-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: var(--fc-geral);
+  text-align: center;
+}
+
+.container-1-text {
+  font-family: var(--ff-text-button);
+  font-size: 1.5rem;
+  color: var(--fc-geral);
+
+  margin-top: 1.5rem;
+}
+
+.cookie-image {
+  width: 30rem;
+  height: 20rem;
+
+  margin-top: 2rem;
+
+  background-image: url(images/_Group_.svg);
+  background-repeat: no-repeat;
+}
+
+.cookie-image:hover {
+  cursor: pointer;
+  animation: shake 0.4s infinite;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 43rem;
+  height: 56rem;
+
+  background: #fff;
+
+  border-radius: 1rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+
+  padding: 4.8rem 6.4rem 6rem 6.4rem;
+}
+
+.lucky-text {
+    width: 31rem;
+    height: 14rem;
+
+    background: #e4edf1;
+
+    margin-top: 2rem;
+
+    animation: message-move 1s ease backwards;
+    animation-delay: .1s;
+}
+
+.lucky-text p{
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4rem;
+  text-align: center;
+
+  padding: 1rem;
+
+  animation: opacity 1s ease backwards;
+  animation-delay: 1s;
+}
+
+.opened-cookie-img {
+  width: 30rem;
+  height: 20rem;
+
+  background-image: url(images/opened-cookie.svg);
+}
+
+#returnButton {
+  width: 17rem;
+  height: 5rem;
+
+  background: #ff9500;
+
+  font-family: var(--ff-text-button);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+
+  border-radius: 0.5rem ;
+  border: none;
+
+  margin-top: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes background-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-4px, -4px);
+  }
+  40% {
+    transform: translate(4px, 4px);
+  }
+  60% {
+    transform: translate(-4px, 4px);
+  }
+  80% {
+    transform: translate(4px, 4px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes message-move {
+0% {
+    transform: translateY(90px);
+    
+    width: 50px;
+    height: 10px;
+}
+100%{
+    transform: translateY(0);
+    
+}
+}
+
+@keyframes opacity {
+   0%{
+    opacity: 0%;
+   }
+   100% {
+    opacity: 100%;
+   }
+}
